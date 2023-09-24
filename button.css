@@ -1,0 +1,125 @@
+/* Add your CSS styles here */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #535c87;
+}
+
+/* :root {
+    --bgOrange: #e84949;
+  } */
+
+#message {
+    display: none;
+    color: #000;
+    padding: 20px;
+    width: 60%;
+    margin-right: 60px;
+    left: 30px;
+    margin-top: 200px;
+    background: #fff;
+    border-radius: 20px;
+    /* font-size: 50px; */
+}
+
+#message {
+  background-color: var(--bgOrange);
+  width: fit-content;
+  color: white;
+  padding: 0.8rem 2.3rem;
+  /* box-shadow: 5px 5px 7px 0px #0000003f; */
+  box-shadow: 5px 5px 7px 0px #fff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.5s;
+  font-weight: 500;
+  border: solid 3px transparent;
+  position: relative;
+  z-index: 1;
+}
+
+#message::before {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  top: 0px;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  z-index: -1;
+  border-radius: 20px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.8s;
+}
+
+#message:hover::before {
+  transform: scaleX(1);
+}
+
+#message:hover {
+  border: solid 3px var(--bgOrange);
+  color: black;
+}
+
+/* div p {
+    font: bold;
+    font-size: 18px;
+    
+} */
+
+
+
+#portfolio {
+    display: block;
+    margin-top: 200px;
+}
+
+#accessButton {
+    background-color: var(--bgOrange);
+    width: fit-content;
+    color: white;
+    padding: 0.8rem 2.3rem;
+    /* box-shadow: 5px 5px 7px 0px #0000003f; */
+    box-shadow: 5px 5px 7px 0px #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-weight: 500;
+    border: solid 3px transparent;
+    position: relative;
+    z-index: 1;
+  }
+  
+  #accessButton::before {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.8s;
+  }
+  
+ #accessButton:hover::before {
+    transform: scaleX(1);
+  }
+  
+#accessButton:hover {
+    border: solid 3px var(--bgOrange);
+    color: black;
+  }
+
+@media (max-width: 768px) {
+    #message {
+        display: block;
+    }
+
+    #portfolio {
+        display: none;
+    }
+}
